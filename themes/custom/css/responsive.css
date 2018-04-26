@@ -1,0 +1,830 @@
+/* DEVICE & RESPONSIVE LAYOUT */
+
+.header .nav-open-button {
+    display: none;
+    /* removes the nav toggle button for desktop site */
+}
+
+#media-query-trigger {
+    /* instead of detecting the width of the window in simple/javascript/script.js it detects the visibility of this element (which is set using media queries) 
+    instead to trigger the hiding/showing of nav and search in mobile mode */
+    display: none;
+    visibility: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 1400px) {
+    /* laptop size */
+    .header {
+        position: absolute;
+    }
+    .HomePage .tile .hover .tile-content {
+        width: 67%;
+    }
+    .HomePage .typography .tile h2 {
+        font-size: 25px;
+        line-height: 28px;
+    }
+    .HomePage .typography .tile p {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 1325px) {
+    .primary {
+        font-size: 13.5px;
+    }
+    .primary li a {
+        padding: 0 5px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        padding-top: 0;
+    }
+    .primary {
+        font-size: 14px;
+    }
+    .main .inner.page-section {
+        padding: 0 20px;
+    }
+    .main .inner {
+        padding: 50px 20px;
+    }
+    /* EmploymentPage */
+    .jobs {
+        max-width: 780px;
+        margin: 30px auto 0;
+        display: block;
+    }
+    .job {
+    	width: 47%;
+    	width: calc(50% - 10px);
+    }
+    
+    .header {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding-top: 44px;
+        box-sizing: border-box;
+    }
+    .header-right {
+        display: none;
+    }
+    .footer {
+        padding-left: 20px;
+    }
+    .footer .stc {
+        right: 20px;
+    }
+    .header {
+        height: 84px;
+    }
+    .header .banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 44px;
+        background: #bb4f06;
+    }
+    .logo {
+        float: none;
+        display: block;
+        margin: auto;
+        height: 44px;
+        line-height: 44px;
+        max-width: 124px;
+        width: 100%;
+    }
+    .logo img {
+        display: none
+    }
+    .logo .mobile-logo {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .mobile-reports-link {
+        display: block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: #000;
+        color: #FFF;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+    }
+    .slideshow-wrapper {
+        top: auto;
+        margin: auto;
+    }
+    /* Navigation*/
+    #media-query-trigger {
+        visibility: visible;
+    }
+    .tablet-nav .header .primary {
+        position: relative;
+        left: auto;
+        right: auto;
+        margin-top: 0;
+        border-top: none;
+    }
+    .primary li.menu-parent a:hover:after,
+    .primary li.menu-parent span.menu-title:hover:after {
+        display: none;
+    }
+    .tablet-nav .header .primary .nav-open-button {
+        /* styling and positioning of the nav toggle button */
+        z-index: 100;
+        width: 45px;
+        height: 44px;
+        position: absolute;
+        left: 0;
+        top: -44px;
+        display: block;
+        cursor: pointer;
+        font-family: 'WebSymbolsRegular';
+        font-size: 20px;
+        color: #F00;
+        text-indent: -10000px;
+        background: #FFF url('../images/icon_menu.png') top center no-repeat;
+    }
+    .tablet-nav .header .primary .nav-open-button.opened {
+        background-position: bottom center;
+    }
+    .tablet-nav .header .primary ul {
+        z-index: 10;
+        position: relative;
+        display: none;
+        /* initially hiding the navigation */
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        white-space: normal;
+        width: 100%;
+        background: #FFF;
+    }
+    .tablet-nav .header .primary>ul {
+        max-height: calc(100vh - 44px);
+        overflow: scroll;
+    }
+    .tablet-nav .header .primary ul li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        float: none;
+        /* displays list items vertically */
+        background: none;
+        position: relative;
+    }
+    .tablet-nav .header .primary ul li:after {
+        /* creates the arrow for the primary nav links */
+        /*content: '\003e';
+			display: block;
+			position: absolute;
+			right: 20px;
+			top: 0px;
+			font-family: 'WebSymbolsRegular';
+			font-size: 14px;
+			color: #999;
+			text-align: center;
+			vertical-align: middle;
+			line-height: 38px;*/
+    }
+    .tablet-nav .header .primary ul li a,
+    .tablet-nav .header .primary ul li span.menu-title {
+        /* styling the  top level nav links */
+        padding: 0;
+        padding-left: 0px;
+        line-height: 55px;
+        height: 55px;
+        font-weight: 900;
+        border-bottom: 1px solid #bbb;
+        color: #bc4f07;
+        font-size: 17px;
+    }
+    .tablet-nav .header .primary ul li:last-child a,
+    .tablet-nav .header .primary ul li:last-child span.menu-title {
+        border-bottom: none;
+    }
+    .tablet-nav .header .primary ul li.current a,
+    .tablet-nav .header .primary ul li.section a {}
+    .tablet-nav .header .primary ul li a:hover {}
+    .tablet-nav .header .primary li.section:after,
+    .tablet-nav .header .primary li.current:after {
+        display: none;
+        /* hides the link arrow on current top level page */
+    }
+    .tablet-nav .tablet-nav .header nav.primary ul li {
+        padding: 0;
+    }
+    /* menu dropdown */
+    .tablet-nav .header .primary ul ul {
+        padding: 0;
+    }
+    .tablet-nav .header .primary ul ul.dropdown {
+        left: auto;
+        padding: 10px;
+    }
+    .primary .dropdown li.column {
+        max-width: 100%;
+    }
+    /* Second level title */
+    .tablet-nav .header .primary .dropdown li.column a,
+    .tablet-nav .header .primary .dropdown li.column span.menu-title {
+        margin-bottom: 0;
+        color: #707070;
+        border-bottom: none;
+        font-family: 'Roboto Slab', serif;
+        font-weight: normal;
+        padding: 0 25px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .primary .dropdown li.column span.menu-title:after,
+    .primary .dropdown li.column span.menu-title:hover:after {
+        display: none !important;
+    }
+    /* Second level links */
+    .tablet-nav .header .primary .dropdown li.column ul li a,
+    .tablet-nav .header .primary .dropdown li.column ul li span.menu-title {
+        color: #bc4f07;
+        line-height: 40px;
+        border: none;
+        height: auto;
+    }
+    /* Thumbnails */
+    .tablet-nav .header .primary .dropdown li.column .thumb {
+        display: none;
+    }
+    .tablet-nav .header .primary .dropdown li.column p {
+        color: #bc4f07;
+        margin-top: 0;
+        padding: 0 25px;
+    }
+    /* button */
+    .primary ul li.menu-parent span.open-button {
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+        height: 100%;
+        float: right;
+        font-size: 20px;
+    }
+    .primary ul li.menu-parent.open a span {
+        content: '-';
+    }
+    .primary li.open ul {
+        display: block !important;
+    }
+    /* ReportsPage */
+    .ReportsPage .report-left,
+    .ReportsPage .report-right {
+        float: none;
+        margin: auto;
+    }
+    .ReportsPage .report-left {
+        margin-bottom: 30px;
+    }
+    /* ContactPage */
+    .contact-details,
+    .contact-form {
+        float: none;
+        margin: auto;
+        max-width: 585px;
+    }
+    .contact-details {
+        margin-bottom: 30px;
+    }
+    /* EventsPage */
+    .button.event-more {
+        margin-top: 10px;
+    }
+    .event .middle {
+        width: 80%;
+    }
+    .u-banner-padding,
+    .c-member-menu {
+        margin: 0;
+    }
+    .c-member-menu .inner {
+        padding: 0 20px;
+    }
+}
+
+
+/* BREAKPOINT 960px */
+
+@media only screen and (max-width: 960px) {
+	.row-custom .col-50 {
+		margin-bottom: 30px;
+	}
+	.row-custom .col-50 > div {
+		line-height: 22px;
+	}	
+    .content img {
+        max-width: 97%;
+        height: auto;
+    }
+    .header .primary ul {
+        margin-left: -12px;
+        -webkit-padding-start: 0px;
+        /* removes default webkit padding on ul items */
+    }
+    .footer .stc,
+    .footer .copyright,
+    .footer .to-top {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        left: auto;
+    }
+    .footer .stc {
+        max-width: 75px;
+        width: 100%;
+        margin: 20px auto;
+        display: block;
+    }
+    .footer .to-top {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .footer .copyright {
+        text-align: center;
+    }
+    .banner-image {
+        margin-bottom: 30px;
+    }
+    /* Sections */
+    .typography .banner-image .content h2 {
+        font-size: 50px;
+        line-height: 56px;
+    }
+    .typography .banner-image .content p {
+        display: none;
+    }
+    /* tables */
+    /* clear-table */
+    .clear-table td {
+        display: block;
+        width: 100%;
+    }
+    /* Force table to not be like tables anymore */
+    /* table, thead, tbody, th, td, tr for each responsive table type */
+    .typography table.table1,
+    .typography .table1 thead,
+    .typography .table1 tbody,
+    .typography .table1 th,
+    .typography .table1 td,
+    .typography .table1 tr,
+    .typography table.table2,
+    .typography .table2 thead,
+    .typography .table2 tbody,
+    .typography .table2 th,
+    .typography .table2 td,
+    .typography .table2 tr,
+    .typography table.table2 tfoot,
+    .typography table.table3,
+    .typography .table3 thead,
+    .typography .table3 tbody,
+    .typography .table3 th,
+    .typography .table3 td,
+    .typography .table3 tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .typography table.table1 thead tr,
+    .typography table.table2 thead tr,
+    .typography table.table3 thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .typography table.table1 tr,
+    .typography table.table2 tr,
+    .typography table.table3 tr {
+        border: 1px solid #ccc;
+    }
+    .typography table.table1 tr td,
+    .typography table.table2 tr td,
+    .typography table.table3 tr td {
+        /* Behave  like a "row" */
+        position: relative;
+        padding-left: 50% !important;
+        /* for table2 */
+    }
+    .typography table.table1 .cell-title,
+    .typography table.table2 .cell-title,
+    .typography table.table3 .cell-title {
+        display: block;
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 10px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-transform: uppercase!important;
+    }
+    /* table1 (and some table 3) */
+    .typography table.table1 tr td:first-child,
+    .typography table.table1 tbody tr td:first-child,
+    .typography table.table3 tr td:first-child,
+    .typography table.table3 tbody tr td:first-child {
+        font-weight: normal;
+        background: #bc4f07;
+        color: #FFF;
+        text-transform: uppercase;
+        border: 3px solid #bc4f07;
+        border-top: none;
+        border-bottom: none;
+    }
+    .typography table.table1 tr td,
+    .typography table.table1 tr td:first-child,
+    .typography table.table3 tr td,
+    .typography table.table3 tr td:first-child {
+        /* Behave  like a "row" */
+        border: 3px solid #f0f0f0;
+        border-top: none;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+        padding-left: 50%;
+    }
+    .typography table.table1 tr td:last-child {
+        border-bottom: 3px solid #f0f0f0;
+    }
+    .typography table.table1 tbody tr,
+    .typography table.table3 tbody tr {
+        border: none;
+    }
+    /* table2 */
+    .typography table.table2 tr td:first-child,
+    .typography table.table2 tfoot tr td {
+        padding-left: 5px !important;
+    }
+    .typography table.table2 tfoot tr td {
+        max-width: 47%;
+        width: 100%;
+        display: inline-block;
+        border: none;
+        border-left: 1px solid #d4d4d4;
+    }
+    .typography table.table2 tfoot tr td:first-child {
+        max-width: 18%;
+    }
+    .typography table.table2 tfoot tr td:last-child {
+        max-width: 76.5%;
+    }
+    /* table3 */
+    .typography table.table3 tbody tr {
+        height: auto;
+    }
+    .typography table.table3 tr td:first-child,
+    .typography table.table3 tr td:last-child {
+        width: auto;
+    }
+    .typography table.table1 tr td,
+    .typography table.table1 tr td:first-child {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .typography table.table3 tr:nth-child(even) {
+        background: transparent;
+    }
+    .typography table.table3 tr td:nth-child(odd) {
+        background: #f0f0f0;
+    }
+    .typography table.table3 tr td.button {
+        padding-left: 0!important;
+        text-align: center;
+    }
+    /* PAGE SPECIFIC LAYOUT */
+    /* HomePage */
+    .HomePage .tile,
+    #instagram .insta-tile {
+        float: none;
+        max-width: 100%;
+        width: 100%;
+    }
+    /* Reports Page */
+    .br-webcam #slider {
+        display: none;
+    }
+    .ie8 .br-webcam #slider,
+    .ie9 .br-webcam #slider {
+        display: block;
+    }
+    .br-webcam #mobile-slider {
+        display: block;
+    }
+    .ie8 .br-webcam #mobile-slider,
+    .ie9 .br-webcam #mobile-slider {
+        display: none;
+    }
+    /* BlogPage */
+    .blog,
+    .blog-sizer {
+        width: 50%;
+    }
+    .blog.open {
+        width: 100%;
+    }
+    /* GalleryPage */
+    .GalleryPage .gallery .inner {
+        padding: 30px;
+    }
+    .gallery a.photo {
+        width: 50%;
+        padding-bottom: 33%;
+    }
+    /* VideoPage */
+    .videos {
+        max-width: 556px;
+        margin: auto;
+    }
+    .video-thumb:nth-child(3n) {
+        margin-right: 30px;
+    }
+    .video-thumb:nth-child(2n) {
+        margin-right: 0;
+    }
+    .o-members-page {
+        padding: 50px 0;
+    }
+    .o-members-page-forms {
+        padding: 50px 0;
+    }
+}
+
+
+/* BREAKPOINT 640px */
+
+
+/* when changing the breakpoint below, change it ito the same value in the script.js file as well */
+
+@media only screen and (max-width: 640px) {
+    body {
+        max-width: 640px;
+    }
+    .blog,
+    .blog-sizer,
+    .blog.open {
+        width: 100%;
+    }
+    .u-1\/2 {
+        width: 100% !important;
+    }
+    /* Footer */
+    .footer .column,
+    .footer .column.last {
+        margin: auto;
+        margin-bottom: 25px;
+        display: block;
+    }
+    .footer .top-columns .column {
+        margin-bottom: 0;
+    }
+    /* Subscription */
+    .subscription form fieldset,
+    .subscription form .middleColumn {
+        max-width: 100%;
+    }
+    .typography .subscription form label {
+        display: block;
+        margin-bottom: 20px;
+        color: #FFF;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+    }
+    .subscription form input[type="email"] {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+    .subscription ::-webkit-input-placeholder {
+        color: #8a3904;
+        /* background colour - hide */
+    }
+    .subscription :-moz-placeholder {
+        /* Firefox 18- */
+        color: #8a3904;
+    }
+    .subscription ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #8a3904;
+    }
+    .subscription :-ms-input-placeholder {
+        color: #8a3904;
+    }
+    .subscription form .Actions {
+        float: none;
+    }
+    .subscription form input.action {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    /* EmploymentPage */
+    .job {
+        display: block;
+        width: 100%;
+    }
+    .job .expand {
+    	right: 5px;
+    }
+    /* VideoPage */
+    .videos {
+        max-width: 260px;
+        margin: 0;
+    }
+    .video-thumb:nth-child(2n) {
+        margin-right: 30px;
+    }
+    .video-thumb:nth-child(1n) {
+        margin-right: 0;
+    }
+    /* Sections */
+    .page-section.has-image.not-banner .image {
+        width: 100%;
+    }
+    .page-section.has-image.image-right .image,
+    .page-section.has-image.image-left .image {
+        position: relative;
+        top: auto;
+        left: auto;
+        background: none;
+    }
+    .page-section.has-image.not-banner .image img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .page-section.has-image.not-banner .content {
+        width: 100%;
+    }
+    .u-1\/2,
+    .u-1\/3,
+    .u-1\/4,
+    .u-1\/8 {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #instagram .insta-tile {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .main .media {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 75%;
+    }
+    .main .media iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .u-hidden-xs {
+        display: none;
+    }
+    .u-visible-xs {
+        display: block;
+    }
+    .typography h2 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    /* Sections */
+    .page-section.has-image.not-banner.typography h2 {
+        padding: 0;
+        margin-bottom: 25px;
+    }
+    .page-section.has-image.not-banner.typography h2:after {
+        display: none;
+    }
+    .page-section.has-image.not-banner.typography p {
+        font-size: 13px;
+        line-height: 25px;
+        margin-bottom: 25px;
+    }
+    .page-section.has-image.not-banner .content {
+        padding: 20px 15px;
+    }
+    /* Banner image */
+    .typography .banner-image .content h2 {
+        font-size: 30px;
+        line-height: 33px;
+    }
+    .typography .sections .banner-image .content h2 {
+        font-weight: normal;
+        padding-bottom: 40px;
+    }
+    .HomePage .banner-image .content div:after {
+        bottom: -30px;
+    }
+    .typography .sections .banner-image img {
+        max-width: 145%;
+        width: 145%;
+        margin-left: -22.5%;
+    }
+    .banner-image .content div:after {
+        /*display: none;*/
+    }
+    /* table3 */
+    .typography table.table3 .cell-title,
+    .typography table.table3 tbody tr td:first-child {
+        font-size: 13px;
+    }
+    /* HomePage */
+    .HomePage .typography .tile p {
+        display: none;
+    }
+    .HomePage .typography .tile p.sub-heading,
+    .HomePage .typography .tile p.button {
+        display: block;
+    }
+    .typography #instagram .insta-tile .hover p {
+        padding: 0 20px;
+        margin-bottom: 10px;
+        font-size: 9px;
+        line-height: 14px;
+    }
+    #instagram .insta-tile {
+        width: 50%!important;
+        float: left;
+    }
+    .orange-strip {
+        height: 70px;
+        padding: 20px;
+    }
+    .typography .orange-strip p {
+        font-size: 17px;
+    }
+    .typography .orange-strip img {
+        max-width: 25px;
+        margin-right: 10px;
+    }
+    .slide.banner-image.linked .content div:after {
+        display: none;
+    }
+    .HomePage .banner-image.linked .content div:after {
+        bottom: 0px;
+    }
+    /* ReportsPage */
+    .brief div.cell {
+        padding: 0 7px;
+        height: 65px;
+    }
+    .brief div.cell:first-child {
+        max-width: 85px;
+        min-width: 1px;
+    }
+    .status-button {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .brief .weather img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+    .brief .temp {
+        font-size: 20px;
+        line-height: 65px;
+    }
+    .brief .snowfall {
+        font-size: 12px;
+    }
+    .brief .snowfall .amount {
+        font-size: 20px;
+    }
+    .o-members-page-forms .o-form {
+        width: 90%;
+        max-width: 90%;
+        padding: 30px 0 30px 30px;
+    }
+    .o-members-page input {
+        width: 80%;
+        max-width: 80%;
+    }
+}

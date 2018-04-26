@@ -1,0 +1,480 @@
+/* fonts */
+  @font-face {
+      font-family: 'WebSymbolsRegular';
+      src: url('../webfonts/websymbols-regular-webfont.eot');
+      src: url('../webfonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../webfonts/websymbols-regular-webfont.woff') format('woff'), url('../webfonts/websymbols-regular-webfont.ttf') format('truetype'), url('../webfonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'MyriadProSemibold';
+    src: url('../webfonts/MyriadProSemibold.eot');
+    src: url('../webfonts/MyriadProSemibold.eot') format('embedded-opentype'),
+         url('../webfonts/MyriadProSemibold.woff2') format('woff2'),
+         url('../webfonts/MyriadProSemibold.woff') format('woff'),
+         url('../webfonts/MyriadProSemibold.ttf') format('truetype'),
+         url('../webfonts/MyriadProSemibold.svg#MyriadProSemibold') format('svg');
+}
+  
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+
+
+/* BASE TYPOGRPHY */
+
+/* These are the default styles for the Simple theme */
+body {
+    font-size: 13px; /* This overrides the browsers default font size */
+    line-height: 20px; /* If you change the font-size make sure you change the line-height value as well - the usual ratio is around 1.5 (font-size x 1.5 = line-height) */
+    margin-bottom: 20px;
+    color: #464646;
+    font-family: 'Roboto Slab', serif;
+}
+
+.clear 
+{
+	clear: both;
+}
+  
+
+/* HEADERS */
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6 {
+    font-weight: normal;
+    margin-bottom: 10px;
+	font-family: 'Lato', sans-serif;
+	color: #bc4f07;
+}
+.typography h1 {
+  font-size: 60px;
+  line-height: 68px;
+  margin: 0 0 25px 0;
+}
+.typography h2 { font-size: 28px; line-height: 35px; margin-bottom: 15px; font-weight: bold; text-transform: uppercase;}
+.typography h3 { font-size: 20px; line-height: 27px; margin-bottom: 15px; font-weight: bold;}
+/*.typography h3 { font-size: 20px; line-height: 27px; margin-bottom: 5px; font-weight: bold; color: #464646; font-family: 'Roboto Slab', serif;}*/
+.typography h4 { font-size: 18px; line-height: 30px; margin-bottom: 20px; font-weight: bold; }
+.typography h5 { font-size: 17px; line-height: 30px; margin-bottom: 10px; font-weight: 900; }
+.typography h6 { font-size: 17px; line-height: 20px; margin-bottom: 0px; font-weight: bold; color: #464646; }
+.typography h7 { font-size: 14px; line-height: 20px; font-weight: bold; margin-bottom: 5px; }
+
+@media only screen and (max-width: 610px) {
+	
+	.typography h1 { font-size: 40px; line-height: 45px; }
+	.typography h2 { font-size: 22px; line-height: 28px; }
+}
+
+@media only screen and (max-width: 610px) {
+	
+	.typography h1 { font-size: 30px; line-height: 35px; }
+	
+}
+
+
+/* PARAGRAGHS */
+.typography  p { font-size: 15px; line-height: 27px; margin: 0 0 30px; font-weight: 300; letter-spacing: 0.01em;}
+  .typography .intro {
+      font-family: "CamboRegular", Georgia, "Times New Roman", Times, serif;
+      font-size: 22px;
+      line-height: 32px;
+      margin-bottom: 20px;
+  }
+.typography em { font-style: italic; }
+
+.footer-white {
+	color: #b7b7b7;
+} /* properly defined in style.css so you can still read the white text in the editor */
+
+.orange {
+	color: #bc4f07;
+}
+
+.typography .large-font {
+	font-size: 19px;
+}
+
+hr {
+	border-top: 1px solid #555555;
+	margin: 20px 0;
+}
+
+.google-map {
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.google-map iframe {
+	position: absolute;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.google-map:after {
+	display: block;
+	content: '';
+	padding-top: 45%;
+}
+
+
+/* LINKS */
+.typography a, 
+.typography a.intro {
+    color: #bc4f07;
+    text-decoration: none;
+}
+  .typography a:hover { 
+    text-decoration: underline;
+  }
+  .typography a:focus { }
+  
+
+
+	a.button,
+	span.button,
+	p.button a,
+	td.button a,
+	a.btn, button, input[type="submit"], .Actions .action{
+		display: inline-block;
+		padding: 5px 30px;
+		font-family: "Lato", sans-serif;
+		font-weight: bold;
+		font-size: 17px;
+		border-radius: 5px;
+		text-decoration: none;
+		text-align: center;
+		cursor: pointer;
+		
+		background: transparent;
+		border: 3px solid #bc4f07;
+		color: #bc4f07; 
+	}
+  
+	a.button:hover,
+	p.button a:hover,
+	td.button a:hover,
+	a.btn:hover, button, input[type="submit"]:hover, .Actions .action:hover{
+		color: #FFF;
+		background: #bc4f07;
+		text-decoration: none;
+	}
+	
+.typography .grey-link {
+	color: #464646;
+	text-decoration: underline;
+}
+
+/* LIST STYLES
+-------------------------------------------- */
+.typography ul, 
+.typography ol,
+.typography dl { margin: 0; }
+.typography ul li { list-style-type: disc; } /* adds disc style bullet to the list */
+	.typography li { 
+		font-size: 15px; 
+		line-height: 27px; 
+		letter-spacing: 0.01em;
+	}
+
+
+/* TABLE STYLES
+-------------------------------------------- */
+.typography table {
+    border-collapse: collapse; /* borders are collapsed into a single border when possible */
+    border: 1px solid #d4d4d4;
+    border-spacing: 0; /* The border-spacing property sets the distance between the borders of adjacent cells - acts as a backup to border-collapse: collapse */
+    margin: 0 0 10px;
+    text-align: left;
+}
+  .typography table tr:nth-child(even) {
+      background-color: #ededed
+  }
+  .typography table tr.even,
+  .typography table th,
+  .typography thead td {
+      background-color: #ededed
+  }
+  .typography table td,
+  .typography table th {
+      padding: 2px 5px;
+      border: 1px solid #d4d4d4;
+      vertical-align: top;
+  }
+  .typography table th {
+      font-weight: bold;
+  }
+  
+  
+.typography table .cell-title { /* repsonsive */
+	display: none;
+}
+  
+/* table style one (and some table 3 styles) */
+	.typography table.table1,
+	.typography table.table3 {
+		margin: auto;
+		border: none;
+		font-family: 'Lato', sans-serif;
+		letter-spacing: 0.05em;
+	}
+	.typography table.table1 thead,
+	.typography table.table3 thead	{
+		background: #bc4f07;
+	}
+
+	.typography table.table1 tr td,
+	.typography table.table3 tr td{
+		padding: 10px;
+		border: none;
+		background: transparent;
+	}
+
+	.typography table.table1 thead tr td,
+	.typography table.table3 thead tr td{
+		border: none;
+		color: #FFF;
+		text-transform: uppercase;
+	}
+
+	.typography table.table1 tbody tr,
+	.typography table.table3 tbody tr 	{
+		border: 3px solid #f0f0f0;
+		border-top: none;
+	}
+	
+	.typography table.table1 tr:nth-child(even) {
+		background-color: transparent;
+	}
+	
+	.typography table.table1 tr td:first-child,
+	.typography table.table3 tr td:first-child	{
+		padding-left: 30px;
+	}
+	.typography table.table1 tbody tr td:first-child {
+		font-weight: 900;
+	}
+	
+/* table style two */
+	.typography table.table2 {
+		margin: auto;
+		margin-bottom: 10px;
+		background: #ededed;
+		border-collapse: inherit;
+		border: 1px solid #dddddd;
+		border-bottom: 1px solid #c6c6c6;
+		border-right: 1px solid #c6c6c6;
+	}
+	
+	.typography table.table2 tr,
+	.typography table.table2 tr:nth-child(even) {
+		background-color: transparent;
+	}
+	
+	.typography table.table2 tr td{
+		border: 1px solid #c6c6c6;
+		border-bottom: 1px solid #dddddd;
+		border-right: 1px solid #dddddd;
+	}
+	
+	.typography table.table2 thead tr td{
+		padding: 20px 5px;
+	}
+	
+	.typography table.table2 tbody tr td,
+	.typography table.table2 tfoot tr td {
+		padding: 10px 5px;
+	}
+	
+/* table style 3 */
+	.typography table.table3 {
+		font-size: 16px;
+	}
+
+	.typography table.table3 tbody tr {
+		height: 75px;
+	}
+	
+	.typography table.table3 tbody tr td {
+		vertical-align: middle;
+		box-sizing: border-box;
+	}
+	
+	.typography table.table3 tr td:first-child {
+		padding-left: 20px;
+		width: 280px;
+		box-sizing: border-box;
+	}
+	
+	.typography table.table3 tr td:last-child {
+		width: 180px;
+		box-sizing: border-box;
+	}
+	
+	.typography table.table3 tr:nth-child(even) {
+		background: #f0f0f0;
+	}
+	
+/* table 4 - clear */
+	.typography table.clear-table {
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 38px;
+		border: none;
+		margin-bottom: 15px;
+	}
+	
+	.typography table.clear-table,
+	.typography table.clear-table tbody
+	.typography table.clear-table tr {
+		display: block;
+	}
+	
+	.typography table.clear-table td, 
+	.typography table.clear-table th{
+		border: none;
+		padding: 0;
+	}
+	
+	.typography table.clear-table td:first-child {
+		width: 250px;
+	}
+	.typography table.clear-table td:nth-child(2n) {
+		/*width: 335px;*/
+	}
+	
+	.typography table tr:nth-child(even) {
+		background: transparent;
+	}
+
+
+
+/* WYSIWYG EDITOR ALIGNMENT CLASSES 
+-------------------------------------------- */
+.typography .left {
+    text-align: left
+}
+.typography .center {
+    text-align: center
+}
+.typography .right {
+    text-align: right
+}
+
+
+/* IMAGES 
+-------------------------------------------- */
+.typography img {
+    height: auto; /* resets the image height so that it maintains its aspect ratio when width is set */
+}
+.typography img.left {
+    float: left;
+    max-width: 50%;
+    margin: 5px 20px 10px 0;
+}
+.typography img.right {
+    float: right;
+    max-width: 50%; /* Responsive width */
+    margin: 5px 0 10px 20px;
+}
+.typography img.leftAlone {
+    float: left;
+    margin-right: 100%;
+    margin-bottom: 10px;
+    clear: both;
+}
+.typography img.center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+    clear: both;
+}
+.typography .captionImage { width: 100%; margin-top: 5px; }
+.typography .captionImage img { margin: 0; }
+  .typography .captionImage.left {
+    float: left;
+    margin: 5px 30px 20px 0px;
+  }
+  .typography .captionImage.right{
+    float: right;
+    margin: 5px 0 20px 30px;
+  }
+  .typography .captionImage.left[style],
+  .typography .captionImage.right[style] {
+    max-width: 50%; /* Overides core width to make responsive */
+  }
+  .typography .captionImage.left img,
+  .typography .captionImage.right img {
+    float: none;
+    max-width: none;
+    width: 100%;
+  }
+  .typography .captionImage.left img {
+    margin-right: -10px;
+  }
+  .typography .captionImage.right img {
+    margin-left: -10px;
+  }
+  .typography .captionImage.right p {
+    margin-left: -10px;
+    text-align: left;
+    margin-left: -10px;
+  }
+.typography .captionImage.leftAlone{
+  float:none;
+  margin: 0 20px 20px 0px;
+}
+.typography .captionImage.center{
+  margin: 0 auto 20px;
+}
+.typography .captionImage p {
+  clear: both;
+  margin: 5px 0;
+  font-style: italic;
+  color: #888;
+}
+
+
+/* BLOCKQUOTES
+-------------------------------------------- */
+.typography blockquote {
+  background: transparent url(../images/blockquote.png) no-repeat 0px 6px;
+  font-family: "CamboRegular", Georgia, "Times New Roman", Times, serif;
+  color: #777;
+  display: block;
+  font-style: italic;
+  margin: 0 0 20px;
+  float: right;
+  text-indent: 30px;
+  width: 50%;
+  margin-left: 5%;
+  clear: both;
+}
+.typography blockquote p {
+  font-size: 17px;
+  line-height: 25px;
+}
+.typography pre {
+  background: #F7F7F7;
+  border: 1px solid #E4E4E4;
+  font-family: Courier, monospace;
+  margin: 0 0 20px 0;
+  padding: 15px;
+  clear: both;
+}
+
+/* ADDRESS
+-------------------------------------------- */
+address {
+  display: block;
+  margin-bottom: 20px;
+}

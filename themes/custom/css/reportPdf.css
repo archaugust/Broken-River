@@ -1,0 +1,217 @@
+body.Pdf.ReportsPage {
+	padding: 30px;
+	padding-top: 30px; /* overide page layout style */
+	font-family: "Lato", sans-serif;
+	/* border: 1px solid; */
+	width: 730px;
+}
+
+html {
+	/* border: 1px solid #F00; */
+}
+@page { margin: 0px; }
+
+/* typography overrides */
+
+.Pdf.typography h5 {
+	margin: 0;
+	color: #464646;
+	font-weight: bold!important;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.Pdf.typography p {
+	margin-bottom: 10px;
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: 300;
+}
+
+.Pdf.typography hr {
+	margin: 10px 0;
+}
+
+.Pdf p.orange {
+	margin: 0;
+}
+
+/* PDF styles */
+
+.Pdf .header {
+	position: relative;
+	height: auto;
+	text-align: center;
+	border-bottom: 3px solid #000;
+}
+
+.typography p.pdf-logo {
+	margin-bottom: 10px;
+}
+
+.pdf-logo img {
+	max-width: 320px;
+}
+
+.Pdf.typography h1 {
+	font-size: 35px;
+	font-weight: bold!important;
+	line-height: 42px;
+	margin-bottom: 5px;
+}
+
+.Pdf.typography p.update-time {
+	font-size: 17px;
+	line-height: 19px;
+}
+
+/* Content */
+
+.Pdf .brief {
+	margin-top: 20px;
+}
+
+.Pdf .brief .cell {
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: content-box; /* for concistency, and debugging */
+}
+
+.brief div.cell:first-child {
+	display: inline-block;
+	width: 100px;
+	min-width: 1px;
+	
+	padding: 10px;
+    padding-left: 0;
+    height: 55px;
+	
+	font-size: 11px;
+}
+.brief div.cell:first-child .status-button {
+	font-size: 14px;
+	line-height: 15px;
+}
+
+.Pdf .brief div.cell:nth-child(2) {
+	width: 45px;
+	display: inline-block;
+	padding: 10px;
+	padding-bottom: 0;
+	height: 65px;
+}
+.Pdf .brief .cell img {
+	width: 45px;
+	line-height: 75px;
+	vertical-align: middle;
+}
+
+.Pdf .brief div.cell:nth-child(3) {
+	width: 50px;
+	padding: 0 10px;
+	font-size: 17px;
+	vertical-align: middle;    
+	text-align: center;	
+}
+
+.Pdf .brief div.cell:nth-child(4) {
+	width: 75px;
+    padding-left: 10px;
+    padding-top: 7px;
+    height: 65px;
+    font-size: 12px;
+    line-height: 15px;
+}
+.Pdf .brief .snowfall .amount {
+	font-size: 17px;
+    line-height: 20px;
+}
+
+.Pdf.ReportsPage .report-left {
+	width: 50%;
+	margin-right: 0;
+	margin-bottom: 20px;
+}
+
+.Pdf.ReportsPage .report-right {
+	width: 50%;
+	padding-left: 65px;
+	padding-top: 35px;
+	box-sizing: border-box;
+}
+
+/* facilities */
+.facility {
+	position: initial;
+	font-size: 14px;
+	max-width: 295px;
+}
+.Pdf.typography .facility p {
+	line-height: 25px;
+    height: 25px;
+    margin: 0;
+	font-size: 13px;
+	padding-bottom: 3px;
+}
+
+.f-name {
+	max-width: 202px;
+	width: 100%;
+	line-height: 20px;
+	height: 20px;
+}
+
+.Pdf .f-status {
+	position: relative;
+	display: inline-block;
+	padding-left: 33px;
+	font-family: "Lato", sans-serif;
+}
+.Pdf .f-status:before {
+	top: 2px;
+}
+
+/* last sections */
+.info-section {
+	margin: 20px 0;
+	padding: 30px 0;
+	border-top: 3px solid #000;
+	border-bottom: 3px solid #000;
+}
+
+.events {
+	width: 39%;
+	display: inline-block;
+	vertical-align: top;
+}
+.info {
+	width: 59%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.bottom-section {
+}
+
+.Pdf .content {
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+	color: #bc4f07;
+}
+
+.Pdf .social {
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+}
+
+.Pdf .social div {
+	margin-left: 15px;
+	display: inline-block;
+	vertical-align: top;
+	width: 47%;
+	text-align: center;
+	color: #bc4f07;
+}

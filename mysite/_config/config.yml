@@ -1,0 +1,30 @@
+---
+Name: mysite
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+SSViewer:
+  theme: 'custom'
+
+#Director:
+#  environment_type: 'dev'
+  
+FormSpamProtectionExtension:
+  default_spam_protector: NocaptchaProtector
+   
+NocaptchaField:
+    site_key: "6LdENyAUAAAAAOvKDVlvC8ictu7giamnfH5GfULi" #Your site key (required)
+    secret_key: "6LdENyAUAAAAAC5l9NWylPB0JyCA-wsb1jZsaojH" #Your secret key (required)
+    verify_ssl: true #Allows you to disable php-curl's SSL peer verification by setting this to false (optional, defaults to true)
+    default_theme: "light" #Default theme color (optional, light or dark, defaults to light)
+    default_type: "image" #Default captcha type (optional, image or audio, defaults to image)
+    default_size: "normal" #Default size (optional, normal or compact, defaults to normal)
+    proxy_server: "" #Your proxy server address (optional)
+    proxy_auth: "" #Your proxy server authentication information (optional)
+    
+Database:
+  check_and_repair_on_build: true
